@@ -128,6 +128,18 @@ rm -rf "$HOME/Library/Application Support/DeepForest"
 
 This permanently deletes local sessions, profiles, plans, and inbox items unless they were exported first.
 
+## Sharing with friends
+
+Personal data is not stored inside the app bundle or repository. Every installation creates its own local SwiftData store and starts with generic defaults.
+
+Create a clean macOS ZIP with:
+
+```bash
+./scripts/package-macos.sh 1.0.0
+```
+
+See [DISTRIBUTION.md](DISTRIBUTION.md) for data-separation guarantees, friend installation instructions, Gatekeeper details, GitHub sharing options, and production signing/notarization guidance.
+
 ## Backups
 
 The current JSON backup format is version 4 and includes:
@@ -149,6 +161,8 @@ Shared/Models/       SwiftData models
 Shared/Store/        Statistics, backup, and widget snapshot helpers
 Shared/Views/        Shared forest rendering
 project.yml          XcodeGen source of truth
+scripts/              Clean distribution packaging tools
+DISTRIBUTION.md       Sharing, privacy, signing, and installation guide
 ```
 
 ## Development workflow

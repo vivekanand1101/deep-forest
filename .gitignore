@@ -21,6 +21,9 @@ error.log
 .idea/
 .vscode/
 
+# Distribution output
+/dist/
+
 # Temporary files
 *.tmp
 *.swp
